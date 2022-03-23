@@ -1,6 +1,9 @@
 package com.vue.service;
 
+import com.vue.entity.vueUser;
+
 public interface userService {
-    void userRegedit(String username,String password);
-    void userLogin(String username,String password);
+    int userRegister(String username,String password) throws Exception;
+    vueUser userLogin(String username);
+    vueUser userSelectOne(String username);
 }
